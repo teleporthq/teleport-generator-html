@@ -30,6 +30,6 @@
     "deepmerge": "^2.1.0",
     "fs-jetpack": "^1.3.0",
     "lodash": "^4.17.5",
-    "teleport-lib-js": "git+ssh://git@gitlab.com/teleporthq/teleport-lib-js.git"
+    "teleport-lib-js": "git+ssh://git@gitlab.com/teleporthq/teleport-lib-js.git#development"
   }
 }
