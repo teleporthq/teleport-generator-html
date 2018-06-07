@@ -10,7 +10,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var teleport_lib_js_1 = require("../../teleport-lib-js");
+var teleport_lib_js_1 = require("teleport-lib-js");
 var HtmlProjectGenerator = /** @class */ (function (_super) {
     __extends(HtmlProjectGenerator, _super);
     function HtmlProjectGenerator(generator, componentGenerator) {

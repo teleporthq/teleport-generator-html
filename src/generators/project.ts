@@ -1,6 +1,6 @@
 import * as _ from 'lodash'
 import * as prettier from 'prettier'
-import { ProjectGenerator, Generator, RenderResult } from '../../teleport-lib-js'
+import { ProjectGenerator, Generator, RenderResult } from 'teleport-lib-js'
 import TeleportGeneratorHtml from '../index'
 import HtmlComponentGenerator from './component'
 
