@@ -1,7 +1,7 @@
 import * as _ from 'lodash'
 import * as pretty from 'pretty'
 
-import { ComponentGenerator, Generator, RenderResult } from '../../teleport-lib-js'
+import { ComponentGenerator, Generator, FileSet } from '../../teleport-lib-js'
 import TeleportGeneratorHtml from '../index'
 import HTMLrenderer from '../renderers/html'
 import COMPONENTrenderer from '../renderers/component'
@@ -107,7 +107,7 @@ export default class HtmlComponentGenerator extends ComponentGenerator {
   }
 
   // tslint:disable-next-line:no-shadowed-variable
-  public generate(component: any, project: any): string {
+  public generate(component: any, project: any): FileSet {
     const { name } = component
     let { content } = component
     this.project = project
@@ -120,7 +120,7 @@ export default class HtmlComponentGenerator extends ComponentGenerator {
 
     const props = ( component.editableProps ? Object.keys(component.editableProps) : null )
 
-    const result = new RenderResult()
+    const result = new FileSet()
     result.addFile(
       `${_.upperFirst(component.name)}.html`,
       pretty(COMPONENTrenderer(name, html, styles, props))

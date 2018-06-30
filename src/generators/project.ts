@@ -1,6 +1,5 @@
 import * as _ from 'lodash'
-import * as prettier from 'prettier'
-import { ProjectGenerator, Generator, RenderResult } from '../../teleport-lib-js'
+import { ProjectGenerator, Generator, FileSet } from '../../teleport-lib-js'
 import TeleportGeneratorHtml from '../index'
 import HtmlComponentGenerator from './component'
 
@@ -14,10 +13,10 @@ export default class HtmlProjectGenerator extends ProjectGenerator {
   }
 
   // tslint:disable-next-line:no-shadowed-variable
-  public generate(project: any, options: any = {}): any {
+  public generate(project: any, options: any = {}): FileSet {
     const { name, components, pages } = project
 
-    const result = new RenderResult()
+    const result = new FileSet()
 
     if (components) {
       Object.keys(components).map(componentName => {
