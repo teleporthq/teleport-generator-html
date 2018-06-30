@@ -130,7 +130,7 @@ var HtmlComponentGenerator = /** @class */ (function (_super) {
         content = stylingResults.content;
         var html = this.renderComponentHTML(content);
         var props = (component.editableProps ? Object.keys(component.editableProps) : null);
-        var result = new teleport_lib_js_1.RenderResult();
+        var result = new teleport_lib_js_1.FileSet();
         result.addFile(_.upperFirst(component.name) + ".html", pretty(component_1.default(name, html, styles, props)));
         return result;
     };
