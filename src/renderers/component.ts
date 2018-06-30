@@ -1,5 +1,4 @@
 import * as _ from 'lodash'
-import { pd } from 'pretty-data'
 
 const renderDependency = (libraryName, types) => {
   return `import { ${types.join(', ')} } from '${libraryName}'`
