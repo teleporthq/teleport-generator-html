@@ -30,7 +30,7 @@
     "deepmerge": "^2.1.0",
     "lodash": "^4.17.5",
     "pretty": "^2.0.0",
-    "teleport-lib-js": "git+ssh://git@gitlab.com/teleporthq/teleport-lib-js.git#development",
+    "@teleporthq/teleport-lib-js": "0.0.3",
     "tslint": "^5.9.1"
   }
 }

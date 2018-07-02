@@ -1,4 +1,4 @@
-import { Generator } from 'teleport-lib-js'
+import { Generator } from '@teleporthq/teleport-lib-js'
 import HtmlComponentGenerator from './generators/component'
 import HtmlProjectGenerator from './generators/project'
 
