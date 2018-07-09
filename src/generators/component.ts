@@ -7,13 +7,13 @@ import TeleportGeneratorHtml from '../index'
 import HTMLrenderer from '../renderers/html'
 import COMPONENTrenderer from '../renderers/component'
 
-function findNextIndexedKeyInObject(object, key){
-  if (! object[key]) return key
-  let i=1
-  while (object[key + "_" + i] !== undefined) {
+function findNextIndexedKeyInObject(object, key) {
+  if (!object[key]) return key
+  let i = 1
+  while (object[key + '_' + i] !== undefined) {
     i++
   }
-  return key + "_" + i
+  return key + '_' + i
 }
 
 export default class HtmlComponentGenerator extends ComponentGenerator {
@@ -42,16 +42,16 @@ export default class HtmlComponentGenerator extends ComponentGenerator {
     parents.push(htmlTag)
 
     // if has children, do the same for children
-    if (content.children && content.children.length>0){
-      if (typeof content.children !== "string") {
-        content.children = content.children.map( child => {
+    if (content.children && content.children.length > 0) {
+      if (typeof content.children !== 'string') {
+        content.children = content.children.map((child) => {
           if (child.source === 'components') {
             child = this.project.components[`${child.type}`].content
           }
           const childStyledResults = this.processStyles(child, styles, parents)
           styles = {
             ...styles,
-            ...childStyledResults.styles
+            ...childStyledResults.styles,
           }
           return childStyledResults.content
         })
@@ -85,8 +85,7 @@ export default class HtmlComponentGenerator extends ComponentGenerator {
 
     let childrenTags: any = []
     if (children && children.length > 0) {
-      if (typeof children === "string") childrenTags = children
-      else childrenTags = children.map( child => this.renderComponentHTML(child))
+      childrenTags = typeof children === 'string' ? children : children.map((child) => this.renderComponentHTML(child))
     }
 
     if (Array.isArray(childrenTags)) {
@@ -103,11 +102,9 @@ export default class HtmlComponentGenerator extends ComponentGenerator {
       mappedProps = mapping.props(mappedProps)
     }
 
-
     return HTMLrenderer(mappedType, childrenTags, styleNames, mappedProps)
   }
 
-  // tslint:disable-next-line:no-shadowed-variable
   public generate(component: any, project: any): FileSet {
     const { name } = component
     let { content } = component
@@ -119,13 +116,10 @@ export default class HtmlComponentGenerator extends ComponentGenerator {
 
     const html = this.renderComponentHTML(content)
 
-    const props = ( component.editableProps ? Object.keys(component.editableProps) : null )
+    const props = component.editableProps ? Object.keys(component.editableProps) : null
 
     const result = new FileSet()
-    result.addFile(
-      `${_.upperFirst(component.name)}.html`,
-      pretty(COMPONENTrenderer(name, html, styles, props))
-    )
+    result.addFile(`${_.upperFirst(component.name)}.html`, pretty(COMPONENTrenderer(name, html, styles, props)))
 
     return result
   }

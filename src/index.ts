@@ -3,6 +3,7 @@ import HtmlComponentGenerator from './generators/component'
 import HtmlProjectGenerator from './generators/project'
 
 export default class TeleportGeneratorHtml extends Generator {
+  // @todo: can we avoid redeclaring componentGenerator and projectGenerator since they exist on Generator?
   public componentGenerator: HtmlComponentGenerator
   public projectGenerator: HtmlProjectGenerator
 
