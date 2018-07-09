@@ -29,7 +29,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var _ = require("lodash");
 var pretty = require("pretty");
-var teleport_lib_js_1 = require("../../teleport-lib-js");
+var teleport_lib_js_1 = require("@teleporthq/teleport-lib-js");
 var html_1 = require("../renderers/html");
 var component_1 = require("../renderers/component");
 function findNextIndexedKeyInObject(object, key) {
@@ -130,7 +130,7 @@ var HtmlComponentGenerator = /** @class */ (function (_super) {
         content = stylingResults.content;
         var html = this.renderComponentHTML(content);
         var props = (component.editableProps ? Object.keys(component.editableProps) : null);
-        var result = new teleport_lib_js_1.RenderResult();
+        var result = new teleport_lib_js_1.FileSet();
         result.addFile(_.upperFirst(component.name) + ".html", pretty(component_1.default(name, html, styles, props)));
         return result;
     };

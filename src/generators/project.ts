@@ -1,5 +1,5 @@
-import * as _ from 'lodash'
-import { ProjectGenerator, Generator, FileSet } from '../../teleport-lib-js'
+import { ProjectGenerator, Generator, FileSet } from '@teleporthq/teleport-lib-js'
+
 import TeleportGeneratorHtml from '../index'
 import HtmlComponentGenerator from './component'
 

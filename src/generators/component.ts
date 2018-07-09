@@ -1,7 +1,8 @@
 import * as _ from 'lodash'
 import * as pretty from 'pretty'
 
-import { ComponentGenerator, Generator, FileSet } from '../../teleport-lib-js'
+import { ComponentGenerator, Generator, FileSet } from '@teleporthq/teleport-lib-js'
+
 import TeleportGeneratorHtml from '../index'
 import HTMLrenderer from '../renderers/html'
 import COMPONENTrenderer from '../renderers/component'
