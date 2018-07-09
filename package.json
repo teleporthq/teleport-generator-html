@@ -1,8 +1,9 @@
 {
-  "name": "teleport-generator-html",
+  "name": "@teleporthq/teleport-generator-html",
   "version": "0.0.1",
   "description": "Html code generator for teleportHQ",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "tsc -w",
     "build": "npm run clean && tsc",
