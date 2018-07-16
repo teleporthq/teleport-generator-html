@@ -1,5 +1,5 @@
-import * as _ from 'lodash'
-import * as pretty from 'pretty'
+import upperFirst = require('lodash/upperFirst')
+import pretty from 'pretty'
 
 import { ComponentGenerator, Generator, FileSet } from '@teleporthq/teleport-lib-js'
 
@@ -119,7 +119,7 @@ export default class HtmlComponentGenerator extends ComponentGenerator {
     const props = component.editableProps ? Object.keys(component.editableProps) : null
 
     const result = new FileSet()
-    result.addFile(`${_.upperFirst(component.name)}.html`, pretty(COMPONENTrenderer(name, html, styles, props)))
+    result.addFile(`${upperFirst(component.name)}.html`, pretty(COMPONENTrenderer(name, html, styles, props)))
 
     return result
   }

@@ -1,6 +1,6 @@
 {
   "name": "@teleporthq/teleport-generator-html",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Html code generator for teleportHQ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -42,6 +42,6 @@
     "@types/node": "^9.6.0",
     "lodash": "^4.17.5",
     "pretty": "^2.0.0",
-    "@teleporthq/teleport-lib-js": "0.0.10"
+    "@teleporthq/teleport-lib-js": "0.0.15"
   }
 }
