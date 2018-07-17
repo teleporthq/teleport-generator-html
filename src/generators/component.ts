@@ -1,5 +1,5 @@
 import upperFirst = require('lodash/upperFirst')
-import pretty from 'pretty'
+import pretty = require('pretty')
 
 import { ComponentGenerator, Generator, FileSet } from '@teleporthq/teleport-lib-js'
 
