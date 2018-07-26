@@ -1,4 +1,4 @@
-import upperFirst = require('lodash/upperFirst')
+import upperFirst from 'lodash/upperFirst'
 
 import { ComponentGenerator, Generator, FileSet } from '@teleporthq/teleport-lib-js'
 

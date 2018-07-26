@@ -1,4 +1,4 @@
-import upperFirst = require('lodash/upperFirst')
+import upperFirst from 'lodash/upperFirst'
 
 export default function component(name: string, html: string, styles, props): any {
   let stylesString = ''
