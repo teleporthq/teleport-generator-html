@@ -10,7 +10,8 @@
     "types": ["node", "jest"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noUnusedLocals": true
   },
   "exclude": [
     "node_modules",
